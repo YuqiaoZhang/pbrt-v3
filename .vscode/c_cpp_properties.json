@@ -1,0 +1,13 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "compileCommands": "${workspaceFolder}/src/build/compile_commands.json"
+        },
+        {
+            "name": "Mac",
+            "compileCommands": "${workspaceFolder}/src/build/compile_commands.json"
+        }
+    ],
+    "version": 4
+}

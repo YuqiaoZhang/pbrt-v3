@@ -1,0 +1,19 @@
+name: MacOSX Debug x64
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: build osx debug x64
+        run: ./.vscode/build_osx_debug_x64.sh
+      - name: test osx debug x64
+        run: ./src/objs/bin/pbrt ./scenes/killeroo-simple.pbrt
+        

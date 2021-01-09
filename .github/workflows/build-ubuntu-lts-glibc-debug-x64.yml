@@ -1,0 +1,21 @@
+name: Ubuntu LTS Glibc Debug x64
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: install ubuntu glibc x64 dependencies
+        run: sudo ./.vscode/install_ubuntu_glibc_x64_dependencies.sh
+      - name: build ubuntu glibc debug x64
+        run: ./.vscode/build_glibc_debug_x64.sh
+      - name: test ubuntu glibc debug x64
+        run: ./src/objs/bin/pbrt ./scenes/killeroo-simple.pbrt
+        

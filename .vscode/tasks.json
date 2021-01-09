@@ -1,0 +1,21 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build glibc debug x64",
+            "type": "shell",
+            "command": "${workspaceFolder}/.vscode/build_glibc_debug_x64.sh",
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "build osx debug x64",
+            "type": "shell",
+            "command": "${workspaceFolder}/.vscode/build_osx_debug_x64.sh",
+            "problemMatcher": [],
+            "group": "build"
+        }
+    ]
+}
